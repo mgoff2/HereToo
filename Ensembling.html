@@ -1,0 +1,555 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Ensembles &#8212; Kaggle Feedback Prize Reflections</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Neural Networks, Language Embedders, Autocoding– Oh, my!" href="NNs.html" />
+    <link rel="prev" title="Part 1: Understanding the Competition" href="Body.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/MCIXLogo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Kaggle Feedback Prize Reflections</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="Landing.html">
+                    Title: Kaggle: Feedback Prize - Predicting Effective Arguments: An Instructive Post-Mortem*
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Intro.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Body.html">
+   Visualizing, Cleaning, Feature Engineering, Mining
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Exploring Ensembles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NNs.html">
+   Neural Networks, Language Embedders, Autocoding– Oh, my!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Conclusion.html">
+   Conclusion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Appendix%201.html">
+   Appendix 1, Philosophical Reflections on NLP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Appendix%202.html">
+   Appendix 2, Concerns Regarding the Data
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FEnsembling.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/Ensembling.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Ensembles</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="ensembles">
+<h1>Ensembles<a class="headerlink" href="#ensembles" title="Permalink to this headline">#</a></h1>
+<p>There are multiple ways I experimented with ensembling (and, to cover my bases, I know that some of the above models are technically ‘ensembles’ in themselves, but I mean the term here to suggest two or more essentially disconnected models that are manually combined, rather than a single pre-defined algorithm). ((Note that here I don’t execute any of the following programs, I just include them for illustrative purposes. They, like the GridSearch, can get pretty time-consumptive.))</p>
+<ul class="simple">
+<li><p>Voting:
+The simplest way to ensemble is using sklearn’s VotingClassifier in conjunction with models of different strengths and unrelated algorithms (i.e., distance-based with decision-based, for example). Multiple models are iteratively trained-and-tested, then at the time of prediction, they can either vote ‘hard’ - each cast a predicted class label, and most represented class wins - or ‘soft’ - each submits a probability score, and the mean of those probabilities returns the predicted class based on highest likelihood. (Respectively, these are ‘classification voting’ and ‘regression voting’).</p></li>
+<li><p>Stacking:
+Having base models predict, then having a meta-model take the predictions from the other learners as its dataset. Easy to implement with SKlearn’s Stacking Classifier.</p></li>
+<li><p>Modified Stacking:
+One approach I tried was simply to append the outputs of a strong (but not the strongest) model to the dataframe, then use that as a feature for the strongest learner. Specifically, since there was no model that was both performing well <em>and</em> capturing a significant portion of the ineffective group, I wanted to find one that performed well on ineffectives, then see if the strongest model could pick up on that hint.</p></li>
+<li><p>Boosting
+Boosting is, of course, used above, so I won’t include a demo here. The simple version is that the model iteratively applies ‘weak learners’ that are essentially random guesses to define boundary regions. After N iterations, however, the final result is to classify the correctly grouped items in the majority of learners as being members of whatever that set happened to be. (Read more here/Tip o’ the Hat to Jocelyn D’Souza: <a class="reference external" href="https://medium.com/greyatom/a-quick-guide-to-boosting-in-ml-acf7c1585cb5">Link.</a>)</p></li>
+<li><p>Blending
+AKA ‘stacked generalization,’ this technique uses a very similar approach to stacking, but instead of having the meta-model predict on a dataset of the base-models’ predictions of the <em>folds</em>, it has the meta-model predict on base models’ predictions on a held-out testing portion. Presumably this is too prevent data-leakage. I didn’t implement it.</p></li>
+<li><p>Bagging
+A portmanteau of ‘Bootstrap’ and ‘Aggregating,’ it means sub-sampling of the data is used <em>with replacement</em> – aka ‘bootstrapping.’ Instead of the ‘folds’ consisting of distinct items, any given fold could have observation x in the context of p, or q, or r, thus it’s reappearance forces the model to evaluate it’s weight in terms of <em>all</em> of the models. Think of it as interviewing an employee at the office– then at the ballgame, then the bar, then with friends, then with family… the different environments evince different features and ideas.</p></li>
+<li><p>Rule-Based Classification
+In a rule-based classification (sometimes called a ‘hybrid’ model), the analyst specifies a set of conditions under which the model’s predictions are modified or overruled. There are number of scenarios in which this might be valuable. Sparsity is one of them: since probabilistic models struggle with underrepresented features or classes, compelling the machine to look for and consider them in a distinctive way can help with identification. Likewise, when boundaries are unclear in a statistical sense, but obvious in a conceptual sense, rules can help. For example, consider all of the metrics computed in this notebook, but being used to compare Hemingway and Shakespeare. Obviously, both should be classified as ‘Effective’ writers, but things like punctuation frequency, sentence length, diction, and so forth will be profoundly different between them. Simply forcing the final model with a rule ‘If Author_ID = “Hemingway”: Effectiveness = ‘Effective’ can help iron out incongruences in a model that otherwise works well.
+Unfortunately, no scientific module that I was able to find makes incorporating user-defined rules into a model architecture particularly easy. While object-oriented and/or functional programming can be used to tweak any extant model to your preferences, I found it a little overwhelming and didn’t pursue it for this project. I’ve added the link below, though, to my ‘Learn-Soon’ bookmark folder, and am eager to explore it further.
+(Tip o’ the Hat to Lukas Haas <a class="reference external" href="https://towardsdatascience.com/hybrid-rule-based-machine-learning-with-scikit-learn-9cb9841bebf2">Link.</a>)</p></li>
+<li><p>Manually Weighted Combinations
+Finally, the most common ensemble technique I saw used in other Kaggle Notebooks was a manual weight assignment. When you go to make a submission, the requirements specify that you pass the ‘test.csv’ file given in the competition data to your model, then put those predictions into a .csv file in the format shown below.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Example of simple voting classifier</span>
+<span class="kn">from</span> <span class="nn">xgboost</span> <span class="kn">import</span> <span class="n">XGBClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">LinearSVC</span>
+<span class="n">svm2</span> <span class="o">=</span> <span class="n">LinearSVC</span><span class="p">(</span><span class="n">max_iter</span> <span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+
+<span class="n">xgb3</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">(</span><span class="n">objective</span> <span class="o">=</span> <span class="s1">&#39;multi:softmax&#39;</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">,</span> <span class="n">num_class</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">VotingClassifier</span>
+
+<span class="n">voting_clf</span> <span class="o">=</span> <span class="n">VotingClassifier</span><span class="p">(</span>
+    <span class="n">estimators</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;svm2&#39;</span><span class="p">,</span> <span class="n">svm2</span><span class="p">),</span>
+                <span class="p">(</span><span class="s1">&#39;xgb3&#39;</span><span class="p">,</span> <span class="n">xgb3</span><span class="p">)],</span>
+                <span class="n">voting</span><span class="o">=</span><span class="s1">&#39;hard&#39;</span><span class="p">)</span>
+
+<span class="n">TotalPipe</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([(</span><span class="s1">&#39;features&#39;</span><span class="p">,</span> <span class="n">features</span><span class="p">),</span>
+                   <span class="p">(</span><span class="s1">&#39;clf&#39;</span><span class="p">,</span> <span class="n">voting_clf</span><span class="p">)</span>
+                   <span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Stacking Classifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span><span class="p">,</span> <span class="n">StackingClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+
+<span class="c1">#Define the standard learners you want to estimate from the dataframe</span>
+<span class="n">Dataframe_models</span> <span class="o">=</span> <span class="p">[</span>
+                 <span class="p">(</span><span class="s1">&#39;rf_1&#39;</span><span class="p">,</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)),</span>
+                 <span class="p">(</span><span class="s1">&#39;rf_2&#39;</span><span class="p">,</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>             
+                <span class="p">]</span>
+<span class="c1">#Define the &#39;final_estimator&#39; using StackingClassifer (here=Logistic Regression);</span>
+<span class="c1">#Bonus: the module has a built in cross_validation which is applied to the entire dataframe models, to avoid overfitting.</span>
+<span class="n">Meta_model</span> <span class="o">=</span> <span class="n">StackingClassifier</span><span class="p">(</span><span class="n">estimators</span><span class="o">=</span><span class="n">base_learners</span><span class="p">,</span>
+                         <span class="n">final_estimator</span><span class="o">=</span><span class="n">LogisticRegression</span><span class="p">(),</span>  
+                         <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Example of &#39;Modified Stacking&#39;</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span><span class="p">,</span> <span class="n">CountVectorizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">MultinomialNB</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">KFP_df</span><span class="o">.</span><span class="n">model_tokens</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">KFP_df</span><span class="o">.</span><span class="n">discourse_effectiveness</span>
+<span class="n">x_train</span><span class="p">,</span> <span class="n">x_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">tts</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
+
+<span class="n">x_train_tf</span> <span class="o">=</span> <span class="n">vec_tfidf</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x_train</span><span class="p">)</span>
+<span class="n">nbc</span> <span class="o">=</span> <span class="n">MultinomialNB</span><span class="p">()</span>
+<span class="n">nbc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train_tf</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="n">xvectors</span> <span class="o">=</span> <span class="n">vec_tfidf</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">y_hat</span> <span class="o">=</span> <span class="n">nbc</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">xvectors</span><span class="p">)</span>
+
+<span class="n">y_hatz</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">y_hat</span><span class="p">)</span>
+<span class="n">y_hatz</span><span class="p">[</span><span class="s1">&#39;nbc_preds&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_hat</span>
+
+<span class="n">KFP_df</span> <span class="o">=</span> <span class="n">KFP_df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">y_hatz</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(),</span> <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">left_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">KFP_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">0</span> <span class="p">:</span> <span class="s1">&#39;nbc_preds&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">KFP_df</span><span class="o">.</span><span class="n">nbc_preds</span> <span class="o">=</span> <span class="n">KFP_df</span><span class="o">.</span><span class="n">nbc_preds</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int64&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Bagging</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">BaggingClassifier</span>
+
+<span class="n">vec_tfidf</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">ngram_range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> 
+                            <span class="n">sublinear_tf</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                            <span class="n">analyzer</span> <span class="o">=</span> <span class="s1">&#39;word&#39;</span><span class="p">,</span> 
+                            <span class="n">norm</span> <span class="o">=</span> <span class="s1">&#39;l2&#39;</span><span class="p">,</span>
+                            <span class="n">max_df</span> <span class="o">=</span> <span class="mi">20000</span><span class="p">,</span>
+                            <span class="n">min_df</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>                              
+                            <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;latin-1&#39;</span><span class="p">,</span>
+                            <span class="n">stop_words</span> <span class="o">=</span> <span class="n">stop_words</span><span class="p">)</span>
+
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">dfcopy</span><span class="o">.</span><span class="n">discourse_text</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">vec_tfidf</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">KFP_df</span><span class="o">.</span><span class="n">discourse_effectiveness</span>
+<span class="n">x_train</span><span class="p">,</span> <span class="n">x_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">tts</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
+
+<span class="n">log_reg</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">max_iter</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="n">bgclf</span> <span class="o">=</span> <span class="n">BaggingClassifier</span><span class="p">(</span><span class="n">base_estimator</span><span class="o">=</span><span class="n">log_reg</span><span class="p">,</span> <span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+                                 <span class="n">max_features</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                                 <span class="n">max_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+                                 <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">bgclf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Training Score: </span><span class="si">%.3f</span><span class="s1">, &#39;</span> <span class="o">%</span><span class="n">bgclf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),</span>
+      <span class="s1">&#39;Model training Score: </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="n">bgclf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Manual Weight Assignment </span>
+<span class="n">predsF</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">predsF</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fullPipe</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">xF</span><span class="p">))</span>
+<span class="n">predsF</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">predsF</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">submission</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;sample_submission.csv&quot;</span><span class="p">)</span>
+<span class="n">submission</span><span class="p">[</span><span class="s1">&#39;Ineffective&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">predsF</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">submission</span><span class="p">[</span><span class="s1">&#39;Adequate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">predsF</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">submission</span><span class="p">[</span><span class="s1">&#39;Effective&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">predsF</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">submission</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;./submission.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">submission</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
+<span class="n">head</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;discourse_id&#39;</span><span class="p">,</span> <span class="s1">&#39;Ineffective&#39;</span><span class="p">,</span> <span class="s1">&#39;Adequate&#39;</span><span class="p">,</span> <span class="s1">&#39;Effective&#39;</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;a261b6e14276&#39;</span><span class="p">,</span> <span class="mf">0.348259</span><span class="p">,</span> <span class="mf">0.603059</span> <span class="p">,</span><span class="mf">0.048682</span><span class="p">],</span>
+<span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;5a88900e7dc1&#39;</span><span class="p">,</span> <span class="mf">0.611058</span><span class="p">,</span> <span class="mf">0.305413</span><span class="p">,</span> <span class="mf">0.083528</span><span class="p">],</span>
+<span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;9790d835736b&#39;</span><span class="p">,</span> <span class="mf">0.626507</span><span class="p">,</span> <span class="mf">0.229162</span><span class="p">,</span> <span class="mf">0.144330</span><span class="p">],</span>
+<span class="p">[</span><span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;75ce6d68b67b&#39;</span><span class="p">,</span> <span class="mf">0.625603</span><span class="p">,</span> <span class="mf">0.184476</span><span class="p">,</span> <span class="mf">0.189921</span><span class="p">],</span>
+<span class="p">[</span><span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;93578d946723&#39;</span><span class="p">,</span> <span class="mf">0.558659</span><span class="p">,</span> <span class="mf">0.287924</span><span class="p">,</span> <span class="mf">0.153416</span><span class="p">]]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">tabulate</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">head</span><span class="p">,</span> <span class="n">tablefmt</span> <span class="o">=</span> <span class="s1">&#39;grid&#39;</span><span class="p">))</span>
+
+<span class="o">+----+----------------+---------------+------------+-------------+</span>
+<span class="o">|</span>    <span class="o">|</span> <span class="n">discourse_id</span>   <span class="o">|</span>   <span class="n">Ineffective</span> <span class="o">|</span>   <span class="n">Adequate</span> <span class="o">|</span>   <span class="n">Effective</span> <span class="o">|</span>
+<span class="o">+====+================+===============+============+=============+</span>
+<span class="o">|</span>  <span class="mi">0</span> <span class="o">|</span> <span class="n">a261b6e14276</span>   <span class="o">|</span>      <span class="mf">0.348259</span> <span class="o">|</span>   <span class="mf">0.603059</span> <span class="o">|</span>    <span class="mf">0.048682</span> <span class="o">|</span>
+<span class="o">+----+----------------+---------------+------------+-------------+</span>
+<span class="o">|</span>  <span class="mi">1</span> <span class="o">|</span> <span class="mi">5</span><span class="n">a88900e7dc1</span>   <span class="o">|</span>      <span class="mf">0.611058</span> <span class="o">|</span>   <span class="mf">0.305413</span> <span class="o">|</span>    <span class="mf">0.083528</span> <span class="o">|</span>
+<span class="o">+----+----------------+---------------+------------+-------------+</span>
+<span class="o">|</span>  <span class="mi">2</span> <span class="o">|</span> <span class="mi">9790</span><span class="n">d835736b</span>   <span class="o">|</span>      <span class="mf">0.626507</span> <span class="o">|</span>   <span class="mf">0.229162</span> <span class="o">|</span>    <span class="mf">0.14433</span>  <span class="o">|</span>
+<span class="o">+----+----------------+---------------+------------+-------------+</span>
+<span class="o">|</span>  <span class="mi">3</span> <span class="o">|</span> <span class="mi">75</span><span class="n">ce6d68b67b</span>   <span class="o">|</span>      <span class="mf">0.625603</span> <span class="o">|</span>   <span class="mf">0.184476</span> <span class="o">|</span>    <span class="mf">0.189921</span> <span class="o">|</span>
+<span class="o">+----+----------------+---------------+------------+-------------+</span>
+<span class="o">|</span>  <span class="mi">4</span> <span class="o">|</span> <span class="mi">93578</span><span class="n">d946723</span>   <span class="o">|</span>      <span class="mf">0.558659</span> <span class="o">|</span>   <span class="mf">0.287924</span> <span class="o">|</span>    <span class="mf">0.153416</span> <span class="o">|</span>
+<span class="o">+----+----------------+---------------+------------+-------------+</span>
+</pre></div>
+</div>
+<p>To manually weight the submission file, you could just generate a <em>set</em> of files like these, one per model, then specify the operation how you wanted it. Whereas the ensembling techniques above use averages or votes, you can tailor this type of combination to your preferences. For example, if you had a logistic regression model’s output that you felt strongly about, a DeBERTa model that you liked but didn’t love, and a Naive Bayes classifier that you felt had limited utility, you could write take the three outputs, and run:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Final_Submission_Scores</span> <span class="o">=</span> <span class="p">(</span><span class="n">logreg</span> <span class="o">*</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">DebertaModel</span> <span class="o">*</span> <span class="mf">0.4</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">NBClf</span> <span class="o">*</span> <span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Body.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Part 1: Understanding the Competition</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="NNs.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Neural Networks, Language Embedders, Autocoding– Oh, my!</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Marcus Goff<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

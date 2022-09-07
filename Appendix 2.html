@@ -1,0 +1,1507 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Appendix 2: Some Frustrations &#8212; Kaggle Feedback Prize Reflections</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Appendix 1: Philosophical Digressions on Language and AI" href="Appendix%201.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/MCIXLogo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Kaggle Feedback Prize Reflections</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="Landing.html">
+                    Title: Kaggle: Feedback Prize - Predicting Effective Arguments: An Instructive Post-Mortem*
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Intro.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Body.html">
+   Visualizing, Cleaning, Feature Engineering, Mining
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Ensembling.html">
+   Exploring Ensembles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NNs.html">
+   Neural Networks, Language Embedders, Autocoding– Oh, my!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Conclusion.html">
+   Conclusion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Appendix%201.html">
+   Appendix 1, Philosophical Reflections on NLP
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Appendix 2, Concerns Regarding the Data
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Appendix 2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FAppendix 2.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/Appendix 2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Appendix 2: Some Frustrations</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="appendix-2-some-frustrations">
+<h1>Appendix 2: Some Frustrations<a class="headerlink" href="#appendix-2-some-frustrations" title="Permalink to this headline">#</a></h1>
+<p>Briefly, there were parts of this competition which rubbed me the wrong way.</p>
+<p>Kaggle is an excellent concept, a wonderful group of folks, and a justly renowned educational platform. But it’s not perfect. I really wish they had somewhat better explanations/tutorials/etc. for navigating their tools from the perspective of a non-computer-science-major. It’s not at all obvious, for example, how to proceed when ‘Cuda is out of memory’, when ‘notebook threw exception’ (but no further details), or when ‘internet must be disabled’ (despite Kaggle not having the module otherwise available) is the feedback you get. There were multiple times where I just had to give up on model variations because despite them running cleanly in Jupyter, they wouldn’t run in Kaggle; or despite them running in Kaggle, they wouldn’t run in the submission. Based on the discussion boards, mods’ contributions, and site updates, they seem to be aware, at least, that some of these things are adversely impacting a lot of users, but so far none of the answers provided worked for me (or either I was doing them wrongly – a very real possibility, but if I, a motivated and well-educated user, can’t figure them out, doesn’t that just reinforce my point?).</p>
+<p>In any event, my biggest frustration was with the dataset itself. I’ll explore that briefly here, and please let me know what you think!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">gt</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;train.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gt</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>discourse_id</th>
+      <th>essay_id</th>
+      <th>discourse_text</th>
+      <th>discourse_type</th>
+      <th>discourse_effectiveness</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0013cc385424</td>
+      <td>007ACE74B050</td>
+      <td>Hi, i'm Isaac, i'm going to be writing about h...</td>
+      <td>Lead</td>
+      <td>Adequate</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>9704a709b505</td>
+      <td>007ACE74B050</td>
+      <td>On my perspective, I think that the face is a ...</td>
+      <td>Position</td>
+      <td>Adequate</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>c22adee811b6</td>
+      <td>007ACE74B050</td>
+      <td>I think that the face is a natural landform be...</td>
+      <td>Claim</td>
+      <td>Adequate</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>a10d361e54e4</td>
+      <td>007ACE74B050</td>
+      <td>If life was on Mars, we would know by now. The...</td>
+      <td>Evidence</td>
+      <td>Adequate</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>db3e453ec4e2</td>
+      <td>007ACE74B050</td>
+      <td>People thought that the face was formed by ali...</td>
+      <td>Counterclaim</td>
+      <td>Adequate</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>So, here we see the blocks of text, the discourse type, and the corrsponding score assigned. Nothing appears off. Given this dataset is a subset of another Kaggle dataset from a previous competition, it’s presumably been checked and double-checked by hundreds of people. But looking more closely we find:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gt</span><span class="p">[</span><span class="s1">&#39;length&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gt</span><span class="o">.</span><span class="n">discourse_text</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gt</span><span class="p">[</span><span class="s1">&#39;words&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gt</span><span class="o">.</span><span class="n">discourse_text</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">()]))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Characters</span> <span class="o">=</span> <span class="s1">&#39;This sentence, including spaces and punctuation marks, is of length:&#39;</span>
+<span class="n">char_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">Characters</span><span class="p">)</span>
+<span class="n">Alternate</span> <span class="o">=</span> <span class="s1">&#39;The shorter example.&#39;</span>
+<span class="n">cc2</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">Alternate</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Characters</span><span class="p">,</span> <span class="n">char_count</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="n">Alternate</span><span class="si">}</span><span class="s2">&#39; (Excluding this annotation and the quotation marks, this sentence has length </span><span class="si">{</span><span class="n">cc2</span><span class="si">}</span><span class="s2">) &quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This sentence, including spaces and punctuation marks, is of length: 68
+&#39;The shorter example.&#39; (Excluding this annotation and the quotation marks, this sentence has length 20) 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Okay, so a given sentence of mildly low complexity is ~70 characters, while a complete sentence of near-maximal brevity – while still being of complete and grammatically correct structure–is around 20.</p>
+<p>My instinct is that, given the rubric’s criteria, it would be hard to be considered adequate using fewer characters than my example sentence above. Well..</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gt</span><span class="p">[</span><span class="n">gt</span><span class="o">.</span><span class="n">length</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>discourse_id</th>
+      <th>essay_id</th>
+      <th>discourse_text</th>
+      <th>discourse_type</th>
+      <th>discourse_effectiveness</th>
+      <th>length</th>
+      <th>words</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>11</th>
+      <td>cc921c5cfda4</td>
+      <td>00944C693682</td>
+      <td>stress.</td>
+      <td>Claim</td>
+      <td>Adequate</td>
+      <td>8</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>7a01d9cb379a</td>
+      <td>013B9AA6B9DB</td>
+      <td>well it is not.</td>
+      <td>Rebuttal</td>
+      <td>Ineffective</td>
+      <td>16</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>f1d3e589dbbe</td>
+      <td>0158970BC5D2</td>
+      <td>easy plagiarism</td>
+      <td>Claim</td>
+      <td>Effective</td>
+      <td>16</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>409</th>
+      <td>dfbcba259ead</td>
+      <td>09133053C474</td>
+      <td>It's fun</td>
+      <td>Claim</td>
+      <td>Adequate</td>
+      <td>9</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>452</th>
+      <td>1ab1030c639a</td>
+      <td>0A5B8761B187</td>
+      <td>Disagree</td>
+      <td>Position</td>
+      <td>Ineffective</td>
+      <td>9</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>36323</th>
+      <td>fc80beab495d</td>
+      <td>E018497ED277</td>
+      <td>low experience</td>
+      <td>Claim</td>
+      <td>Ineffective</td>
+      <td>15</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>36324</th>
+      <td>5db66047d029</td>
+      <td>E018497ED277</td>
+      <td>less communicate</td>
+      <td>Claim</td>
+      <td>Adequate</td>
+      <td>17</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>36549</th>
+      <td>a54c4c66b7cb</td>
+      <td>EDDFFD34DBD4</td>
+      <td>opinions.</td>
+      <td>Claim</td>
+      <td>Ineffective</td>
+      <td>10</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>36591</th>
+      <td>e751b1501bda</td>
+      <td>F52B9A0882BB</td>
+      <td>learn what to do.</td>
+      <td>Claim</td>
+      <td>Adequate</td>
+      <td>18</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>36747</th>
+      <td>0ae154c2131f</td>
+      <td>FF9E0379CD98</td>
+      <td>not organized</td>
+      <td>Claim</td>
+      <td>Adequate</td>
+      <td>14</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+<p>265 rows × 7 columns</p>
+</div></div></div>
+</div>
+<p>265 example-texts have a character count of 20 or fewer characters! As we can see above, these are not – in many cases– even complete <em>phrases</em>, much less sentences remotely resembling the examples given.
+Nevertheless, these were largely rated to be adequate! For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">gt</span><span class="p">[</span><span class="s1">&#39;discourse_effectiveness&#39;</span><span class="p">][</span><span class="mi">11</span><span class="p">],</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The entirety of observation eleven&#39;s discourse Text: &#39;</span><span class="si">{</span><span class="n">gt</span><span class="p">[</span><span class="s1">&#39;discourse_text&#39;</span><span class="p">][</span><span class="mi">11</span><span class="p">]</span><span class="si">}</span><span class="s2">&#39;  &quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Adequate 
+
+The entirety of observation eleven&#39;s discourse Text: &#39;stress. &#39;  
+</pre></div>
+</div>
+</div>
+</div>
+<p>The entirety of this item’s discourse_text is the word ‘stress.’ (Period in original). Let’s recall what the rubric has to say about a ‘claim’ and how it is assessed:</p>
+<blockquote>
+<div><p>Adequate:</p>
+<ul class="simple">
+<li><p>Description: The claim relates to the position but may simply repeat part of the position or state a claim without support.
+The claim is moderately valid and acceptable.</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>Example: Position: “Every individual owes it to themselves to think seriously about important matters, no matter the difficulty”.
+Claim: ” It is important to think seriously about important matters although some people do not do this”.</p></li>
+</ul>
+</div></blockquote>
+<p>Note that the claim is contextually defined: it should be interpreted in terms of its relationship to the preceding position statement. Below, we can use the essay ID t reconstruct the original essay in its entirety:</p>
+<div class="cell tag_full-width docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">simple_colors</span>
+<span class="n">exampleEssay</span> <span class="o">=</span> <span class="n">gt</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">gt</span><span class="p">[</span><span class="s1">&#39;essay_id&#39;</span><span class="p">]</span><span class="o">==</span> <span class="s1">&#39;00944C693682&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">exampleEssay</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">row</span><span class="o">.</span><span class="n">discourse_text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;With&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">row</span><span class="o">.</span><span class="n">discourse_text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;stress&#39;</span><span class="p">):</span>
+        <span class="n">row</span><span class="o">.</span><span class="n">discourse_text</span> <span class="o">=</span> <span class="n">simple_colors</span><span class="o">.</span><span class="n">yellow</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">discourse_text</span><span class="p">,</span> <span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;(Discourse Type: </span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">discourse_type</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">discourse_text</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;(Score= </span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">discourse_effectiveness</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(Discourse Type: Lead) 
+ Limiting the usage of cars has personal and professional support all across the globe and yet it has yet to be embraced everywhere. Statistical proof show where it may help and real life examples of some of the effects of reducing, or getting rid of altogether, cars in one&#39;s daily life. While &quot;recent studies suggest that Americans are buying fewer cars, driving less and getting fewer licenses as each year goes by&quot; (Source 4), is that really enough or for the right reason? There are plenty of reasons to stop, or limit, the amount of cars being driven on the roads for every kind of person, from the hippie to the businessman, from the mom to the college student.  
+ (Score= Effective) 
+
+(Discourse Type: Position) 
+ <span class=" -Color -Color-Bold -Color-Bold-Yellow">With so many things in this world that few people agree on, this is a nice change to see in regards the removal of so many cars. Why would they all agree, one might ask. Well, there are plenty of reasons. </span>
+ 
+ (Score= Effective) 
+
+(Discourse Type: Claim) 
+ <span class=" -Color -Color-Bold -Color-Bold-Yellow">stress. </span> 
+ (Score= Adequate) 
+
+(Discourse Type: Evidence) 
+ It is no secret that morning traffic jams and 5&#39;o&#39;clock traffic is often enough to send any driver into a fit of unadulterated rage and what better way is there to prevent that than to simply not drive at all? Mother and media trainer, Heidrum Walter attested to this after moving into a mostly car-less community, claiming &quot;when [she] had a car [she] was always tense. [She&#39;s] much happier [that] way&quot; (Source 1). If that were not enough, businessman Carlos Arturo Plaza who participated in the Day Without Cars in Bogota, Colombia, after just a day was able to say &quot;it&#39;s a good oppurtunity to take away stress&quot; (Source 3). Just one day was enough to de-stress this man and if that does not speak wonders, one has to wonder what does. The event &quot;[left] the streets of [Bogota] eerily devoid of traffic jams&quot; (Source 3), which goes to show how stressful it was everyday, with traffic jams a common occurance. No one enjoys them, so why continue to suffer through them?  
+ (Score= Effective) 
+
+(Discourse Type: Claim) 
+ the environment suffers greatly from the many car emissions let out on the roads.  
+ (Score= Effective) 
+
+(Discourse Type: Evidence) 
+ &quot;Passenger cars are responsible for 12 percent of greenhouse gas emissions in Europe ... and up to 50 percent in some car-intensive areas in the United States&quot; (Source 1). This alone should be enough to horrify anyone out of such copious amounts of car usage. If that were not enough, &quot;transportation is the second largest source of America&#39;s emissions&quot; (Source 4). It is clear that cars are only doing more harm to this earth all humans live on and happen to only have one of, so there is no need to continue on knowing this without changing something about that. Even car-pooling could significantly reduce emissions as there would be less cars out there, which is possible through &quot;more flexible commuting arrangements, including the evolution of shared van services for getting to work&quot; (Source 4). 
+ 
+ (Score= Effective) 
+
+(Discourse Type: Claim) 
+ , adding the last two reasons together makes for another very important factor in all of this: everyone&#39;s general health. Both stress and high concentrations of smog can do a toll on one&#39;s body and the reduction of cars, once again, helps to reduce this terrible down-sides to the easy transportation option  
+ (Score= Effective) 
+
+(Discourse Type: Evidence) 
+ If it must be described as &quot;emissions ... are choking cities&quot; (Source 1), then why not be a bit more concerned. Air pollution can affect those with pre-existing respitory issues and stress can be a deciding factor in how effient and well a person can function. Stress on the road can lead to unsafe driving and a worse performance at work, school, or any other task-oriented location that many go to with the aid of a car.  
+ (Score= Adequate) 
+
+(Discourse Type: Claim) 
+ It is also worth noting that cities that have embraced a no car lifestyle such as Vauban or Bogota have generally improved as a community and have given back anything the newly car-less citizens may have been missing out on through saving them time and money.  
+ (Score= Effective) 
+
+(Discourse Type: Evidence) 
+ In Vauban, &quot;stores are placed a walk away, on a main street, rather than in malls along some distant highway&quot; (Source 1). This is not only much more cost-efficient, but also convienent. This is saving both time and money, just like in Bogota where &quot;parks and sports centers [] have bloomed throughout the city; uneven, pitted sidewalks have been replaced by broad, smooth sidewalks; rush-hour restrictions have dramatically cut traffic; and new restaurants and upscale shopping districts have cropped up&quot; (Source 3). Not only does this help individual citizens and business owners, it helps the overall economy of the city as well. 
+ 
+ (Score= Effective) 
+
+(Discourse Type: Concluding Statement) 
+ Individual car use isn&#39;t bad. Millions of individuals using cars, however, is very bad. Note the emphasis. Even just making a concious effort to car pool, bike to work or school, use public transportation, or use some sort of alternative transportation could be enough to clear up the air of some of it&#39;s emissions, keep oneself and others happier and less stressed, save time and money, and improve their city all in one little decision. It&#39;s just a matter of going ahead and doing it, so what is stopping anyone from going out and making that change now? Be the change you want to see and limit your car usage now.   
+ (Score= Effective) 
+</pre></div>
+</div>
+</div>
+</div>
+<p>So, here we can see that the text is complete in itself. The student wrote:
+‘Why would they all agree, one might ask. Well, there are plenty of reasons. Stress.’</p>
+<p>Presumably, they intended something to the effect of a list or heading:</p>
+<ul class="simple">
+<li><p>‘Why do people agree? Many reasons: stress, exhaustion, …</p></li>
+</ul>
+<p>Or:</p>
+<ul class="simple">
+<li><p>‘There are many reasons people agree. Reason one: Stress.
+Or something like that.</p></li>
+</ul>
+<p>‘Well, there are many reasons’ is the actual ‘claim’; ‘stress’ is basically a heading. But the former got identified as a ‘position,’ the single word ‘stress’ as the claim, and the subsequent discussion of car-less communities as the evidence.</p>
+<p>This – in conjunction with the multifarious examples that follow, lead me to think that the supervisory inputs are contradictory and incompatible with the rubric used to guide this dataset’s development. These kinds of errors mislead both the analyst and the learner. In order for any algorithm to meaningfully learn there must be genuine and consistent distinctions. When a supervised learner gets:</p>
+<ul class="simple">
+<li><p>Height | Description</p></li>
+<li><p>5’1”   | Tall</p></li>
+<li><p>5’2”   | Tall</p></li>
+<li><p>5’1    | Short</p></li>
+<li><p>6’1    | Tall</p></li>
+<li><p>…</p></li>
+</ul>
+<p>there’s no ‘there’ there.</p>
+<p>And indeed for human learner it’s much the same: a person learning English would infer that the word ‘height’ must mean <em>some other feature</em>, but certainly not how tall people are. The instances being called ‘tall’ have no relationship with the instances’ distance from head-to-ground. <em>If</em> some tangential or spurious link can be discovered, that may be even worse: it would mean the outputs from the machine indicate sharing our meaning in some sense, while in fact they have merely latched onto some completely unrelated factor invisble without the synchronous computation of a million partial derivatives.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gt</span><span class="p">[</span><span class="n">gt</span><span class="p">[</span><span class="s1">&#39;length&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">60</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>discourse_id</th>
+      <th>essay_id</th>
+      <th>discourse_text</th>
+      <th>discourse_type</th>
+      <th>discourse_effectiveness</th>
+      <th>length</th>
+      <th>words</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>11</th>
+      <td>cc921c5cfda4</td>
+      <td>00944C693682</td>
+      <td>stress.</td>
+      <td>Claim</td>
+      <td>Adequate</td>
+      <td>8</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>c20937683442</td>
+      <td>00BD97EA4041</td>
+      <td>No because, why should a computer know how you...</td>
+      <td>Position</td>
+      <td>Adequate</td>
+      <td>57</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>ed3a833a2f49</td>
+      <td>013B9AA6B9DB</td>
+      <td>What is that thing on Mars?</td>
+      <td>Lead</td>
+      <td>Adequate</td>
+      <td>28</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>7a01d9cb379a</td>
+      <td>013B9AA6B9DB</td>
+      <td>well it is not.</td>
+      <td>Rebuttal</td>
+      <td>Ineffective</td>
+      <td>16</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>244544e584aa</td>
+      <td>013B9AA6B9DB</td>
+      <td>but in 2001 a newer image was taken</td>
+      <td>Rebuttal</td>
+      <td>Adequate</td>
+      <td>36</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>36748</th>
+      <td>1e92924f6555</td>
+      <td>FF9E0379CD98</td>
+      <td>dont have partner when are you take the classe...</td>
+      <td>Claim</td>
+      <td>Adequate</td>
+      <td>55</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>36751</th>
+      <td>f6a04e6a32cc</td>
+      <td>FF9E0379CD98</td>
+      <td>when you take the class online you dont have o...</td>
+      <td>Claim</td>
+      <td>Adequate</td>
+      <td>55</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>36756</th>
+      <td>e8241b9934b7</td>
+      <td>FF9E0379CD98</td>
+      <td>but is not bad idea take the class</td>
+      <td>Rebuttal</td>
+      <td>Adequate</td>
+      <td>35</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>36757</th>
+      <td>74c58fcc7ef8</td>
+      <td>FF9E0379CD98</td>
+      <td>you cant work or cant study after school with ...</td>
+      <td>Evidence</td>
+      <td>Adequate</td>
+      <td>55</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>36761</th>
+      <td>9d5bd7d86212</td>
+      <td>FFA381E58FC6</td>
+      <td>also people have different views and opinions ...</td>
+      <td>Claim</td>
+      <td>Adequate</td>
+      <td>57</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+<p>4569 rows × 7 columns</p>
+</div></div></div>
+</div>
+<p>Over 12% of the entire corpus consists of sentences, phrases, fragments, and discrete words that are shorter than my example. Of these, as you can see below, the majority were assessed to have adequately met the description (800  were even ‘Effective’!).</p>
+<p>Now, given this is a subset of a former Kaggle competition’s dataset, I guessed that perhaps what happened was something was explained in the previous conversation that I was not aware of. But that page is still live [<a class="reference external" href="https://www.kaggle.com/competitions/feedback-prize-2021/overview/description">https://www.kaggle.com/competitions/feedback-prize-2021/overview/description</a>] and it suggests very plainly that we also are looking for complete sentences (at least) to comprise the discourse element.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">gt</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">gt</span><span class="p">[</span><span class="s1">&#39;length&#39;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">60</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">gt</span><span class="p">[</span><span class="s1">&#39;discourse_effectiveness&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;Adequate&#39;</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2989
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">gt</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">gt</span><span class="p">[</span><span class="s1">&#39;length&#39;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">60</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">gt</span><span class="p">[</span><span class="s1">&#39;discourse_effectiveness&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;Effective&#39;</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>811
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gt</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">gt</span><span class="p">[</span><span class="s1">&#39;length&#39;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">60</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">gt</span><span class="p">[</span><span class="s1">&#39;discourse_effectiveness&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;Effective&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">gt</span><span class="p">[</span><span class="s1">&#39;discourse_type&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;Evidence&#39;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>discourse_id</th>
+      <th>essay_id</th>
+      <th>discourse_text</th>
+      <th>discourse_type</th>
+      <th>discourse_effectiveness</th>
+      <th>length</th>
+      <th>words</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>10149</th>
+      <td>6097449f6081</td>
+      <td>B6F03D0CEABE</td>
+      <td>Let them grow up.</td>
+      <td>Evidence</td>
+      <td>Effective</td>
+      <td>18</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>13465</th>
+      <td>8cfde4ea838e</td>
+      <td>F2B86853339B</td>
+      <td>They polute the air and they can be very dange...</td>
+      <td>Evidence</td>
+      <td>Effective</td>
+      <td>52</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>17456</th>
+      <td>fadb350e65c2</td>
+      <td>2B568E2031B1</td>
+      <td>It will make our earth cleaner</td>
+      <td>Evidence</td>
+      <td>Effective</td>
+      <td>31</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>I don’t see how ‘Let them grow up.’ can have effectively met the criteria described above.</p>
+<p>In any case, these aren’t just oddballs.</p>
+<p>Things don’t look great when we shift from characters to words, either.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Words</span> <span class="o">=</span> <span class="s1">&#39;This sentence, excluding punctuation marks, contains the following number of words:&#39;</span>
+<span class="n">word_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">Characters</span><span class="o">.</span><span class="n">split</span><span class="p">()])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Words</span><span class="p">,</span> <span class="n">word_count</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This sentence, excluding punctuation marks, contains the following number of words: 10
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gt</span><span class="p">[</span><span class="n">gt</span><span class="p">[</span><span class="s1">&#39;words&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>discourse_id</th>
+      <th>essay_id</th>
+      <th>discourse_text</th>
+      <th>discourse_type</th>
+      <th>discourse_effectiveness</th>
+      <th>length</th>
+      <th>words</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>11</th>
+      <td>cc921c5cfda4</td>
+      <td>00944C693682</td>
+      <td>stress.</td>
+      <td>Claim</td>
+      <td>Adequate</td>
+      <td>8</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>ed3a833a2f49</td>
+      <td>013B9AA6B9DB</td>
+      <td>What is that thing on Mars?</td>
+      <td>Lead</td>
+      <td>Adequate</td>
+      <td>28</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>7a01d9cb379a</td>
+      <td>013B9AA6B9DB</td>
+      <td>well it is not.</td>
+      <td>Rebuttal</td>
+      <td>Ineffective</td>
+      <td>16</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>244544e584aa</td>
+      <td>013B9AA6B9DB</td>
+      <td>but in 2001 a newer image was taken</td>
+      <td>Rebuttal</td>
+      <td>Adequate</td>
+      <td>36</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>e713e8b20cf3</td>
+      <td>0158970BC5D2</td>
+      <td>summer projects should be teacher-designed</td>
+      <td>Position</td>
+      <td>Adequate</td>
+      <td>43</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>36733</th>
+      <td>3414073ceef9</td>
+      <td>FEF42864AE28</td>
+      <td>the lack of socialization. \n</td>
+      <td>Claim</td>
+      <td>Effective</td>
+      <td>28</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>36746</th>
+      <td>aa1e0cd8e3a9</td>
+      <td>FF9E0379CD98</td>
+      <td>dont have a teacher</td>
+      <td>Claim</td>
+      <td>Adequate</td>
+      <td>20</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>36747</th>
+      <td>0ae154c2131f</td>
+      <td>FF9E0379CD98</td>
+      <td>not organized</td>
+      <td>Claim</td>
+      <td>Adequate</td>
+      <td>14</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>36756</th>
+      <td>e8241b9934b7</td>
+      <td>FF9E0379CD98</td>
+      <td>but is not bad idea take the class</td>
+      <td>Rebuttal</td>
+      <td>Adequate</td>
+      <td>35</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>36761</th>
+      <td>9d5bd7d86212</td>
+      <td>FFA381E58FC6</td>
+      <td>also people have different views and opinions ...</td>
+      <td>Claim</td>
+      <td>Adequate</td>
+      <td>57</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+<p>3681 rows × 7 columns</p>
+</div></div></div>
+</div>
+<p>10% of all discourse_texts are of fewer than 10 words, most are ‘Adequate’ and – at least of those visible– consist of fragments of decontextualized words.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Example of an effective type Claim: </span>
+<span class="n">gt</span><span class="o">.</span><span class="n">discourse_text</span><span class="p">[</span><span class="mi">46</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;easy plagiarism &#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>As shown below, none of these are without a corresponding rating, since no ratings are absent from the dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gt</span><span class="o">.</span><span class="n">discourse_effectiveness</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Adequate       20977
+Effective       9326
+Ineffective     6462
+Name: discourse_effectiveness, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">gt</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">gt</span><span class="o">.</span><span class="n">discourse_effectiveness</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>36765
+36765
+</pre></div>
+</div>
+</div>
+</div>
+<p>Likewise, we can see below that there are duplicates of the discourse_text: 76 to be precise. Since that number is so small, perhaps these are just goofs.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">duplicates</span> <span class="o">=</span> <span class="n">gt</span><span class="p">[</span><span class="n">gt</span><span class="o">.</span><span class="n">discourse_text</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span><span class="n">keep</span><span class="o">=</span><span class="kc">False</span><span class="p">)]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;discourse_text&quot;</span><span class="p">)</span>
+<span class="n">duplicates</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>discourse_id</th>
+      <th>essay_id</th>
+      <th>discourse_text</th>
+      <th>discourse_type</th>
+      <th>discourse_effectiveness</th>
+      <th>length</th>
+      <th>words</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>26691</th>
+      <td>7f9c3500259d</td>
+      <td>A602D45D22B2</td>
+      <td>"That's a lava dome that takes the form of an ...</td>
+      <td>Evidence</td>
+      <td>Adequate</td>
+      <td>104</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>27350</th>
+      <td>d628a6adda3a</td>
+      <td>ADB68BCD2874</td>
+      <td>"That's a lava dome that takes the form of an ...</td>
+      <td>Evidence</td>
+      <td>Adequate</td>
+      <td>104</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>25391</th>
+      <td>781452d9404c</td>
+      <td>942ECB176B3A</td>
+      <td>At the most basic level, the electoral college...</td>
+      <td>Position</td>
+      <td>Adequate</td>
+      <td>68</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>28835</th>
+      <td>6fa171a95540</td>
+      <td>C2BAF4ADA2CA</td>
+      <td>At the most basic level, the electoral college...</td>
+      <td>Claim</td>
+      <td>Adequate</td>
+      <td>68</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>28436</th>
+      <td>9e12ec699196</td>
+      <td>BB3A6C2D0B65</td>
+      <td>Big States</td>
+      <td>Claim</td>
+      <td>Adequate</td>
+      <td>11</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>20121</th>
+      <td>35bf70c4a673</td>
+      <td>4CA37D113612</td>
+      <td>Big States</td>
+      <td>Claim</td>
+      <td>Ineffective</td>
+      <td>11</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>3933</th>
+      <td>c5b2ecb3888e</td>
+      <td>44E2726DA1B3</td>
+      <td>I agree</td>
+      <td>Position</td>
+      <td>Adequate</td>
+      <td>8</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>11285</th>
+      <td>5e4022e93247</td>
+      <td>CB66B685DAF6</td>
+      <td>I agree</td>
+      <td>Position</td>
+      <td>Adequate</td>
+      <td>8</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>17087</th>
+      <td>99782ca26927</td>
+      <td>2714214F7D9E</td>
+      <td>I think students should be required to perform...</td>
+      <td>Position</td>
+      <td>Adequate</td>
+      <td>66</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>29590</th>
+      <td>33d6bbba823c</td>
+      <td>CE64FA08E4CF</td>
+      <td>I think students should be required to perform...</td>
+      <td>Position</td>
+      <td>Adequate</td>
+      <td>66</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>But that doesn’t seem to be the case. Take a look at the 3rd/4th entry: it is exactly the same text, but it has been classfied as two different discourse-types. Item 5/6 shows that ‘Big states’ is both ‘Adequate’ <em>and</em> ‘Ineffective’! The last four elements show that ‘I agree’ is of equal sophistication as ‘I agree with the principal’, which (to me) is hard to understand.</p>
+<p>Now, we could, I suppose, just remove all of these and continue by dismissing these several thousand cases and focusing on the more intact texts.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#only effective texts with more than 60 characters.</span>
+<span class="n">longer_texts</span> <span class="o">=</span> <span class="n">gt</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">gt</span><span class="p">[</span><span class="s1">&#39;length&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">60</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">gt</span><span class="p">[</span><span class="s1">&#39;discourse_effectiveness&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;Effective&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">gt</span><span class="p">[</span><span class="s1">&#39;discourse_type&#39;</span><span class="p">]</span><span class="o">==</span> <span class="s1">&#39;Counterclaim&#39;</span><span class="p">)]</span>
+
+<span class="c1">#Let&#39;s take a look at a couple of (non-random) examples to illustrate my point.</span>
+<span class="c1">#for i in longer_texts.discourse_text[43]:</span>
+ <span class="c1">#   print(i, &#39;\n&#39;)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">longer_texts</span><span class="o">.</span><span class="n">discourse_text</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">36</span><span class="p">],</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>    
+<span class="nb">print</span><span class="p">(</span><span class="n">longer_texts</span><span class="o">.</span><span class="n">discourse_text</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">26</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Some can argue that teachers can pick just as fascinating topics as students.  
+
+Some people may claim that giving students the ability to design their own project is not &quot;giving&quot; but &quot;forcing&quot;. Students may need guidelines in order to work properly and receive a fair grade for their effort. Or worst case, they simply won&#39;t do the work. If a student needs a step-by-step process on how to recount their learning, then how will they expect to fend for themselves once they graduate? 
+</pre></div>
+</div>
+</div>
+</div>
+<p>But…</p>
+<p>According to the grading rubric, an Effective counterclaim is:</p>
+<blockquote>
+<div><p>…reasonable and relevant. It represents a valid objection to the position.</p>
+</div></blockquote>
+<p>While an Adequate one is:</p>
+<blockquote>
+<div><p>…not quite a reasonable opposing opinion, or it is not closely relevant to the position.</p>
+</div></blockquote>
+<p>And this gets to the second point: who decides what is ‘reasonable,’ what is ‘relevant,’ and what is ‘valid’?</p>
+<p>To me, these two excerpts are just apples and oranges. The first one is obviously shorter, less informative, less thoughtful, rhetorically weaker, and barely constitutes a counterclaim (or at least a counter-<em>argument</em>) at all – it’s closer in my mind to a ‘Claim.’ The latter argument builds a case, legitimizes the point of view, and discusses the legitimate and plausible consequences that worry opposing points-of-view.</p>
+<p>Consider, another excerpt, and contrast it with the first example above:</p>
+<div class="cell tag_full-width docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Adequate_Comparison</span> <span class="o">=</span> <span class="n">gt</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">gt</span><span class="p">[</span><span class="s1">&#39;length&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">60</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">gt</span><span class="p">[</span><span class="s1">&#39;discourse_effectiveness&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;Adequate&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">gt</span><span class="p">[</span><span class="s1">&#39;discourse_type&#39;</span><span class="p">]</span><span class="o">==</span> <span class="s1">&#39;Counterclaim&#39;</span><span class="p">)]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Adequate_Comparison</span><span class="o">.</span><span class="n">discourse_text</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">199</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Although these views are correct, there are some who disagree. Some people believe that students don&#39;t learn when creating their own projects to do. They also believe that students aren&#39;t capable of doing their own project without the assistance of a teacher. 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Again, it’s hard for me to see why this text is less effective than the example above. It is longer, more descriptive, and more complex. It is a little clunky with the ‘projects to do’-bit, but the above one is clunky as well (‘can argue’). In terms of ambiguity, validity, relevance, informativeness, and so on, <em>I</em> would judge this example to be a better element than the first.</p>
+<p>Now compare <em>that</em> Adequate text with this one:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">Adequate_Comparison</span><span class="o">.</span><span class="n">discourse_text</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">52</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>. annother thing is that there are about 335 horses, so if you are affraid of horses then this program isn&#39;t for you. 
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is incorrectly punctuated, uses incorrect capitalization, has multiple misspellings, introduces irrelevance (‘335 horses’), is informal (‘isn’t for you’) and – most importantly– <em>isn’t a counterclaim</em>. It’s a position, or maybe a claim, but unless the preceding sentence was describing some melange of things a critic might point out, this appears to be an opinion held by the author. How is this comparable to the item above?</p>
+<p>I won’t beat this dead horse further. My point, though, is that there appears to be a good bit of the messiness and impulsivity that human graders are prone to – for example, being impressed/in a good mood/hungry/liking the student/fearing the parent/not wanting the headache… (or the opposite). When you’re trying to meet your friends at the bar in time for the game, and you’ve got a stack of 30,000 essays to label and grade, you just default to ‘Adequate’, then when you see something that is even mildly impressive (or the name of a student you’re fond of, etc., etc.), you throw-in an occasional ‘Effective.’ When you’re tired or bored or spiteful and/or you come across a particularly awful text, you throw it in the ineffective pile.</p>
+<p>What that results in is really 5 strata:</p>
+<ul class="simple">
+<li><ol class="simple">
+<li><p>Truly bad essays</p></li>
+</ol>
+</li>
+<li><ol class="simple">
+<li><p>Truly good essays</p></li>
+</ol>
+</li>
+<li><ol class="simple">
+<li><p>Truly Average essays</p></li>
+</ol>
+</li>
+<li><ol class="simple">
+<li><p>Truly Average essays marked good or bad willy-nilly</p></li>
+</ol>
+</li>
+<li><ol class="simple">
+<li><p>Truly good or bad essays marked average by default.</p></li>
+</ol>
+</li>
+</ul>
+<p>And the effect of those last two groups is that the waters become muddied – The machine can pick between 1 and 2, at least pretty well, but since it’s trained to recognize as ‘Average’ examples which are truly effective or ineffective, it just defaults basically <em>everything</em> to adequate. Only the most extreme cases of goood/bad are labeled as such.</p>
+<p>Notice the indices in the code: I’ve not gone beyond triple-digits. Recall that there are over 36,000 texts in this document…</p>
+<p>I suppose you could make the case that the ambiguity and inconsistency and so on are part-and-parcel to the nature of this type of data or this type of project, and that the goal isn’t to make the model necessarily <em>good</em> at evaluating essays, only to make the model <em>comparable to</em> the average of judgments made by the graders. But as a former teacher, I can tell you that humans are quite prone to sloppiness, incoherence, arbitrariness, and inconsistency. Ignoring the ‘no there there’ problem (i.e., that there <em>is</em> no meaningful pattern here, and thus any model will be useless in terms of generalizability), imagine what it would look like to deploy such a model. Do we really want – or consider it in any way to be progress – to have a machine– one that informs schools, publishing houses, standardized exam makers, and so on – that ‘correctly’ marks both dangling clauses full of misspellings <em>and</em> reasonable (if stylistically modest) counterclaims as both being adequate compositions?</p>
+<p>Put differently, it seems to me that any model fit to this dataset would accomplish the exact opposite of what we’d want in such a product. That is, we’d presumably want to outsource to a computer work that humans would do sloppily, lazily, in a biased manner, in an inconsistent manner, and so forth. If my eyes have glazed over after essay 400 and my mind has turned to such a soup that I’m unable to distinguish or discriminate any better than what’s shown in these excerpts, no computer should be told to try and capture exactly how I’m thinking in that context! When we’ve trained, in the past, models on text that is racist, sexist, or otherwise discriminatory, we’ve ended up with racist and sexist AI. If we train models on text that reflects human errors or inconsistencies or whatever, then we’ll have a grader that’s just as bad as the error-prone human it’s meant to replace. Of course, a neural network <em>can</em> discover <em>any</em> function – even a chaotic, disorderly one– but that doesn’t mean it’s any <em>good</em>. Any deployable model needs to have consistent parameters for identifying good from bad in a generalizable way, and if it is fit to such an idiosyncratic, slapdash dataset, it will yield a correspondingly chaotic framework. Consistently outputting nonsense may be consistent, but it’s still nonsense.</p>
+<p>It seems, further, that AI which is trained on anything other than the best of human judgement will be a merely faster and less accountable source of errors, not a solution to them. We source the substance of AI’s ‘thought’ through human-created data. Only the very best of this data ought to be captured in the algorithms we generate, and only be deployed after we’ve carefully confirmed this to be the case. That’s the only way to ensure consistency, accuracy, and unbiased evaluation. Having mined this dataset for the better part of two months, and having expectation after expectation disconfirmed in model-testing, I’m not sure I’m convinced this is that sort of dataset, and I’m skeptical that any model derived from it is useful in terms of deployment. I certainly wouldn’t want to be graded by it.</p>
+<p>I think the intention of this project is very noble and worthwhile, but without better data, I doubt it will do much in terms of ameliorating the limitations of present writing-feedback tools. The performance of this task requires both normative and aesthetic judgments, and Thanksgiving dinner with your family is all that’s required to prove that objectivity with respect to what constitutes ‘soundness’, ‘validity’, ‘effectiveness’, ‘logical coherence’, ‘evidence’, and so on is not definable. What’s more, even when agreement can be achieved about what works conceptually, there is an almost infinite number of ways in which it may be shared. Hemingway and Shakespeare may both be literary geniuses, but there’s hardly a single quantifiable thing in their work that indicates that shared capacity. It is not the instantiation on paper, but the affective state brought about in human minds that distinguishes – and links– their work. Effective natural language processing is as much about human minds – intentions, feelings, inclinations, sarcasm, bias – as it is about the actual words that are present. This requires sensitivity to not only the structural elements of analysis (linguistics, statistical methods) – the “processing,” if you will –  but also to the “natural”– the way humans actually use it, the way one individual’s thoughtful remark is another’s inconsiderate snarkiness, or the way one person’s common sense is another’s blatant falsehood. When you pair this with the way that language is inherently ambiguous, contextually dependent, and inseparable from models of the world and one’s experiences therein, it seems unlikely that the statistical sophistication will be sufficient on its own to achieve what this project sets out to.</p>
+<p>I mentioned above that I thought web-scraping for essays to use would be a better approach to building what the competition seems to be looking for. I think this would ameliorate at least some of the dataset’s issues. For one thing, when an essay is selected to be <em>featured</em>, it is because that dataset is likely indisputably an example of the score it seeks to model. That level of reliability – graded once by the tired, overworked grader, then implicitly graded again by the author of the website’s post– would ensure that the fickleness and caprice of the human grader wasn’t mixed in with the reliable examples. Additionally, the diversity of topic-prompts that would be represented in this way would ensure that topical noise didn’t confuse the learner, forcing it to focus on structural elements of the essay. Lastly, a ‘segment identifier’ algorithm could be built alongside the scoring algorithm, allowing the learner to ‘recognize’ complete instances of essay portions, rather than having the dataset be peppered with single-word elements.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Appendix%201.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Appendix 1: Philosophical Digressions on Language and AI</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Marcus Goff<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
