@@ -1,0 +1,20 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: Landing
+chapters:
+- file: Intro
+  title: Introduction and Contents
+- file: Body
+  title: Visualizing, Cleaning, Feature Engineering, Mining
+- file: Ensembling
+  title: Exploring Ensembles
+- file: NNs
+  title: Bert, LSTM, DeBerta
+- file: Conclusion
+  title: Conclusion 
+- file: Appendix 1
+  title: Appendix 1, Philosophical Reflections on NLP
+- file: Appendix 2
+  title: Appendix 2, Concerns Regarding the Data
